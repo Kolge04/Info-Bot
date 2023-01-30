@@ -91,7 +91,7 @@ async def id(bot, update):
     
     
     
- @Bot.on_message(filters.command(['iid'],prefixes=['/', '!'])
+@Bot.on_message(filters.command(['iid'],prefixes=['/', '!'])
     & (filters.group | filters.private)
     & ~ filters.edited)
 async def get_ids(client, message):
