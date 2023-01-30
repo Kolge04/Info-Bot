@@ -91,8 +91,8 @@ async def id(bot, update):
     
     
     
-@Bot.on_message(filters.private & filters.command("id"))
-async def get_ids(client, message):
+@Bot.on_message(filters.private & filters.command("men"))
+async def id(client, message):
       if message.reply_to_message:
          chat = message.reply_to_message.from_user.id
          file_id = None
