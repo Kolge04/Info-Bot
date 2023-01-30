@@ -93,7 +93,7 @@ async def id(bot, update):
     
 @Bot.on_message(filters.command(['iid'],prefixes=['/', '!'])
     & (filters.group | filters.private)
-    & ~ filters.edited)
+    & ~ (filters.edited)
 async def get_ids(client, message):
       if message.reply_to_message:
          chat = message.reply_to_message.from_user.id
